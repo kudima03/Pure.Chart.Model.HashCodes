@@ -27,9 +27,9 @@ public sealed record SeriesHash : IDeterminedHash
         187,
     ];
 
-    private readonly ISeries _series;
+    private readonly IChartSeries _series;
 
-    public SeriesHash(ISeries series)
+    public SeriesHash(IChartSeries series)
     {
         _series = series;
     }
