@@ -4,7 +4,7 @@ using String = Pure.Primitives.String.String;
 
 namespace Pure.Chart.Model.HashCodes.Tests;
 
-public sealed record SeriesHashTests
+public sealed record ChartSeriesHashTests
 {
     [Fact]
     public void Determined()
@@ -12,8 +12,8 @@ public sealed record SeriesHashTests
         Assert.Equal(
             "AE644C66047BCE80C1AFD870147090D5710E130BC4B47098F6FD86467E6B06C6",
             new HexString(
-                new SeriesHash(
-                    new Series(
+                new ChartSeriesHash(
+                    new ChartSeries(
                         new String("rtfgnbhju"),
                         new String("efrhisuyodn"),
                         new String("dfvbjnkhil")
@@ -26,8 +26,8 @@ public sealed record SeriesHashTests
     [Fact]
     public void EnumeratesAsUntyped()
     {
-        IEnumerable hash = new SeriesHash(
-            new Series(
+        IEnumerable hash = new ChartSeriesHash(
+            new ChartSeries(
                 new String("rtfgnbhju"),
                 new String("efrhisuyodn"),
                 new String("dfvbjnkhil")

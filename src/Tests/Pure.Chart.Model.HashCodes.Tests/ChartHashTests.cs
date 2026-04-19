@@ -20,12 +20,12 @@ public sealed record ChartHashTests
                         new Axis(new String("wesdiokj")),
                         new Axis(new String("dfvmkoj")),
                         [
-                            new Series(
+                            new ChartSeries(
                                 new String("wesdoijf"),
                                 new String("sdnijkufv"),
                                 new String("qwmkioda")
                             ),
-                            new Series(
+                            new ChartSeries(
                                 new String("dfjuipovb"),
                                 new String("qwnbhjklde"),
                                 new String("fdvjbkgio")
@@ -48,12 +48,12 @@ public sealed record ChartHashTests
                 new Axis(new String("wesdiokj")),
                 new Axis(new String("dfvmkoj")),
                 [
-                    new Series(
+                    new ChartSeries(
                         new String("wesdoijf"),
                         new String("sdnijkufv"),
                         new String("qwmkioda")
                     ),
-                    new Series(
+                    new ChartSeries(
                         new String("dfjuipovb"),
                         new String("qwnbhjklde"),
                         new String("fdvjbkgio")
