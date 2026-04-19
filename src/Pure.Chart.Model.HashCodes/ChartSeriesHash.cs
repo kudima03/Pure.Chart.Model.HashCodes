@@ -5,7 +5,7 @@ using Pure.HashCodes.Abstractions;
 
 namespace Pure.Chart.Model.HashCodes;
 
-public sealed record SeriesHash : IDeterminedHash
+public sealed record ChartSeriesHash : IDeterminedHash
 {
     private static readonly byte[] TypePrefix =
     [
@@ -29,7 +29,7 @@ public sealed record SeriesHash : IDeterminedHash
 
     private readonly IChartSeries _series;
 
-    public SeriesHash(IChartSeries series)
+    public ChartSeriesHash(IChartSeries series)
     {
         _series = series;
     }
