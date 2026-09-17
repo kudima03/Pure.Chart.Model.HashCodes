@@ -16,6 +16,8 @@ dotnet stryker --mutation-level Complete      # mutation testing (CI breaks at 9
 dotnet pack --configuration Release -p:Version=<version> --output .
 ```
 
+CI additionally passes `-p:AssemblyVersion` (pinned to the major) and `-p:FileVersion`; see `.github/workflows/publish-nuget.yml`.
+
 ## Architecture
 
 This is a **hash code implementation library** — no interfaces, no configuration, no I/O. It contains exactly four `sealed record` types, one per chart model abstraction:
