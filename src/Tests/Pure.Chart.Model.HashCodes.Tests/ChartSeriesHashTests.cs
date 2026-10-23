@@ -1,4 +1,5 @@
 using System.Collections;
+using Pure.Chart.Model.HashCodes.Tests.Doubles;
 using Pure.Primitives.String.Operations;
 using String = Pure.Primitives.String.String;
 
@@ -10,13 +11,41 @@ public sealed record ChartSeriesHashTests
     public void Determined()
     {
         Assert.Equal(
-            "AE644C66047BCE80C1AFD870147090D5710E130BC4B47098F6FD86467E6B06C6",
+            "58BD5668305D6F7B6E2C880D34B307EE60CE1C3DFBFB3DA3C8E2DA87999E62CA",
             new HexString(
                 new ChartSeriesHash(
-                    new ChartSeries(
+                    new FakeChartSeries(
                         new String("rtfgnbhju"),
                         new String("efrhisuyodn"),
-                        new String("dfvbjnkhil")
+                        new String("dfvbjnkhil"),
+                        new String("dashed")
+                    )
+                )
+            ).TextValue
+        );
+    }
+
+    [Fact]
+    public void LineTypeAffectsHash()
+    {
+        Assert.NotEqual(
+            new HexString(
+                new ChartSeriesHash(
+                    new FakeChartSeries(
+                        new String("rtfgnbhju"),
+                        new String("efrhisuyodn"),
+                        new String("dfvbjnkhil"),
+                        new String("solid")
+                    )
+                )
+            ).TextValue,
+            new HexString(
+                new ChartSeriesHash(
+                    new FakeChartSeries(
+                        new String("rtfgnbhju"),
+                        new String("efrhisuyodn"),
+                        new String("dfvbjnkhil"),
+                        new String("dotted")
                     )
                 )
             ).TextValue
@@ -27,10 +56,11 @@ public sealed record ChartSeriesHashTests
     public void EnumeratesAsUntyped()
     {
         IEnumerable hash = new ChartSeriesHash(
-            new ChartSeries(
+            new FakeChartSeries(
                 new String("rtfgnbhju"),
                 new String("efrhisuyodn"),
-                new String("dfvbjnkhil")
+                new String("dfvbjnkhil"),
+                new String("dashed")
             )
         );
 
@@ -42,7 +72,7 @@ public sealed record ChartSeriesHashTests
         }
 
         Assert.Equal(
-            "AE644C66047BCE80C1AFD870147090D5710E130BC4B47098F6FD86467E6B06C6",
+            "58BD5668305D6F7B6E2C880D34B307EE60CE1C3DFBFB3DA3C8E2DA87999E62CA",
             Convert.ToHexString([.. bytes])
         );
     }

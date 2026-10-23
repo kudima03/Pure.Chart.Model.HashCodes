@@ -41,6 +41,7 @@ public sealed record ChartSeriesHash : IDeterminedHash
                 .Concat(new DeterminedHash(_series.Legend))
                 .Concat(new DeterminedHash(_series.XAxisSource))
                 .Concat(new DeterminedHash(_series.YAxisSource))
+                .Concat(new DeterminedHash(_series.LineType))
         ).GetEnumerator();
     }
 
