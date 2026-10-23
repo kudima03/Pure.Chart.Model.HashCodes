@@ -1,4 +1,5 @@
 using System.Collections;
+using Pure.Chart.Model.HashCodes.Tests.Doubles;
 using Pure.Primitives.String.Operations;
 using String = Pure.Primitives.String.String;
 
@@ -10,7 +11,7 @@ public sealed record ChartHashTests
     public void Determined()
     {
         Assert.Equal(
-            "43265193734B4F789C5F3231B7963CB1A1B8A974444C0B00771C8BD970418095",
+            "C9925DD52F84A3EE886562FDEDFEC4D535DB5A843D2B4E9933F0C9D300202368",
             new HexString(
                 new ChartHash(
                     new Chart(
@@ -20,15 +21,17 @@ public sealed record ChartHashTests
                         new Axis(new String("wesdiokj")),
                         new Axis(new String("dfvmkoj")),
                         [
-                            new ChartSeries(
+                            new FakeChartSeries(
                                 new String("wesdoijf"),
                                 new String("sdnijkufv"),
-                                new String("qwmkioda")
+                                new String("qwmkioda"),
+                                new String("solid")
                             ),
-                            new ChartSeries(
+                            new FakeChartSeries(
                                 new String("dfjuipovb"),
                                 new String("qwnbhjklde"),
-                                new String("fdvjbkgio")
+                                new String("fdvjbkgio"),
+                                new String("dashed")
                             ),
                         ]
                     )
@@ -48,15 +51,17 @@ public sealed record ChartHashTests
                 new Axis(new String("wesdiokj")),
                 new Axis(new String("dfvmkoj")),
                 [
-                    new ChartSeries(
+                    new FakeChartSeries(
                         new String("wesdoijf"),
                         new String("sdnijkufv"),
-                        new String("qwmkioda")
+                        new String("qwmkioda"),
+                        new String("solid")
                     ),
-                    new ChartSeries(
+                    new FakeChartSeries(
                         new String("dfjuipovb"),
                         new String("qwnbhjklde"),
-                        new String("fdvjbkgio")
+                        new String("fdvjbkgio"),
+                        new String("dashed")
                     ),
                 ]
             )
@@ -70,7 +75,7 @@ public sealed record ChartHashTests
         }
 
         Assert.Equal(
-            "43265193734B4F789C5F3231B7963CB1A1B8A974444C0B00771C8BD970418095",
+            "C9925DD52F84A3EE886562FDEDFEC4D535DB5A843D2B4E9933F0C9D300202368",
             Convert.ToHexString([.. bytes])
         );
     }

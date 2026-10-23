@@ -24,7 +24,7 @@ This is a **hash code implementation library** — no interfaces, no configurati
 
 - `ChartHash` — hashes `IChart`: concatenates a 16-byte type-discriminator prefix with `DeterminedHash` values for Title, Description, Type, XAxis, YAxis, and each element of Series
 - `ChartTypeHash` — hashes `IChartType`: prefix + Name
-- `ChartSeriesHash` — hashes `IChartSeries`: prefix + Legend, XAxisSource, YAxisSource
+- `ChartSeriesHash` — hashes `IChartSeries`: prefix + Legend, XAxisSource, YAxisSource, LineType
 - `AxisHash` — hashes `IAxis`: prefix + Legend
 
 Every type implements `IDeterminedHash` (from `Pure.HashCodes.Abstractions`), which extends `IEnumerable<byte>`. The hash is computed lazily by enumerating bytes. The 16-byte type-discriminator prefix in each class ensures domain separation — two objects of different types with identical field values produce different hash sequences.

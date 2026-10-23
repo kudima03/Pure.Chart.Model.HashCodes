@@ -19,14 +19,14 @@ All types are `sealed record` and implement `IDeterminedHash` (which extends `IE
 |---|---|---|
 | `ChartHash` | `IChart` | Title, Description, Type, XAxis, YAxis, Series |
 | `ChartTypeHash` | `IChartType` | Name |
-| `ChartSeriesHash` | `IChartSeries` | Legend, XAxisSource, YAxisSource |
+| `ChartSeriesHash` | `IChartSeries` | Legend, XAxisSource, YAxisSource, LineType |
 | `AxisHash` | `IAxis` | Legend |
 
 All hash types live in the `Pure.Chart.Model.HashCodes` namespace.
 
 ## Dependencies
 
-- [`Pure.Chart.Model.Abstractions`](https://github.com/kudima03/Pure.Chart.Model.Abstractions/tree/0.1.0-preview.1.0.0) — chart domain interfaces (`IChart`, `IChartType`, `IChartSeries`, `IAxis`)
+- [`Pure.Chart.Model.Abstractions`](https://github.com/kudima03/Pure.Chart.Model.Abstractions/tree/0.1.0-preview.2.0.0) — chart domain interfaces (`IChart`, `IChartType`, `IChartSeries`, `IAxis`)
 - [`Pure.HashCodes`](https://github.com/kudima03/Pure.HashCodes/tree/2.1.0) — deterministic, byte-enumerable hash computation over Pure primitives
 
 ## Target Frameworks

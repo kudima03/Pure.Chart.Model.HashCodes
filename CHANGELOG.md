@@ -6,6 +6,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [Unreleased]
+
+### Changed
+- **`ChartSeriesHash`** now also hashes the series `LineType`, concatenated
+  right after `YAxisSource`. Hash values of every `ChartSeriesHash`, and of
+  every `ChartHash` containing series, change accordingly.
+- Bumped `Pure.Chart.Model.Abstractions` dependency to
+  `0.1.0-preview.2.0.0`, where `IChartSeries` gained `LineType`.
+
 ## [0.1.0-preview.1.0.0] — 2026-04-19
 
 ### Changed
