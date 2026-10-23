@@ -33,7 +33,7 @@ Every type implements `IDeterminedHash` (from `Pure.HashCodes.Abstractions`), wh
 
 **Multi-targeting:** net7.0, net8.0, net9.0, net10.0. All types must remain AOT-compatible (`IsAotCompatible = true`).
 
-**Package validation:** `EnablePackageValidation = true` with `PackageValidationBaselineVersion = 0.1.0-preview.1.0.0`. Breaking API changes fail the build.
+**Package validation:** `EnablePackageValidation = true` with `PackageValidationBaselineVersion = 0.1.0-preview.2.0.0`. Breaking API changes fail the build.
 
 **Publishing:** triggered by pushing a semver tag (e.g. `1.2.3`). The tag value becomes the `PackageVersion`. Packages are pushed to both GitHub Packages and NuGet.org.
 
