@@ -6,7 +6,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
-## [Unreleased]
+## [0.1.0-preview.2.0.0] — 2026-10-23
+
+### Added
+- `README.md` is now packed into the NuGet package.
 
 ### Changed
 - **`ChartSeriesHash`** now also hashes the series `LineType`, concatenated
@@ -14,6 +17,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   every `ChartHash` containing series, change accordingly.
 - Bumped `Pure.Chart.Model.Abstractions` dependency to
   `0.1.0-preview.2.0.0`, where `IChartSeries` gained `LineType`.
+- The assembly version is now derived from the release tag's major
+  version (`0.0.0.0` for `0.x` releases) instead of the SDK default
+  `1.0.0.0`; the file version is the tag's numeric part.
 
 ## [0.1.0-preview.1.0.0] — 2026-04-19
 
