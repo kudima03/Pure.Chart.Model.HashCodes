@@ -67,7 +67,7 @@ public sealed record ChartHashTests
             )
         );
 
-        ICollection<byte> bytes = new List<byte>(32);
+        ICollection<byte> bytes = [with(32)];
 
         foreach (object b in hash)
         {
