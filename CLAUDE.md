@@ -31,13 +31,13 @@ Every type implements `IDeterminedHash` (from `Pure.HashCodes.Abstractions`), wh
 
 **Dependency chain:** `Pure.Chart.Model.Abstractions` supplies the interfaces being hashed; `Pure.HashCodes` supplies `DeterminedHash` (the byte-level compositor) and `IDeterminedHash`.
 
-**Multi-targeting:** net7.0, net8.0, net9.0, net10.0. All types must remain AOT-compatible (`IsAotCompatible = true`).
+**Multi-targeting:** net7.0, net8.0, net9.0, net10.0, net11.0. All types must remain AOT-compatible (`IsAotCompatible = true`).
 
 **Package validation:** `EnablePackageValidation = true` with `PackageValidationBaselineVersion = 0.1.0-preview.2.0.0`. Breaking API changes fail the build.
 
 **Publishing:** triggered by pushing a semver tag (e.g. `1.2.3`). The tag value becomes the `PackageVersion`. Packages are pushed to both GitHub Packages and NuGet.org.
 
-**Tests:** xUnit project targeting net10.0 only. CI enforces ≥ 98% line coverage and ≥ 98% mutation score.
+**Tests:** xUnit project targeting net11.0 only. CI enforces ≥ 98% line coverage and ≥ 98% mutation score.
 
 ## Code Style
 
