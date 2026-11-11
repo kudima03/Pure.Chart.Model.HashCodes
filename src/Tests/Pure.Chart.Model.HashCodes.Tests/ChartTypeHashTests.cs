@@ -22,7 +22,7 @@ public sealed record ChartTypeHashTests
     {
         IEnumerable hash = new ChartTypeHash(new ChartType(new String("fhbnuiglvj")));
 
-        ICollection<byte> bytes = new List<byte>(32);
+        ICollection<byte> bytes = [with(32)];
 
         foreach (object b in hash)
         {
