@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [0.1.0-preview.2.1.0] — 2026-11-11
+
+### Added
+- Added `net11.0` to the library target frameworks.
+
+### Changed
+- Bumped `Pure.Chart.Model.Abstractions` dependency to
+  `0.1.0-preview.2.1.0` and `Pure.HashCodes` to `2.2.0`, the .NET 11
+  releases.
+
 ## [0.1.0-preview.2.0.0] — 2026-10-23
 
 ### Added
